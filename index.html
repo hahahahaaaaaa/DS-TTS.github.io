@@ -1,586 +1,868 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.66.0" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/skeleton.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="alternate" href="index.xml" type="application/rss+xml" title="SpeechResearch">
-<title>DS-TTS</title>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.66.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+
+  <link rel="alternate" href="index.xml" type="application/rss+xml" title="SpeechResearch">
+  <title>DS-TTS</title>
 </head>
+
 <body>
 
-<div class="container">
-	<main role="main">
-		<article>
-      
-      <h3 class="title">DS-TTS</h3>
-      
-      <p class="authors"><strong>ZiYi Yang</strong></p>
-      <div class="abstract">
-        <p><strong>Abstract</strong><br>
-          pass
-        </p>
-      </div>
+  <div class="container">
+    <main role="main">
+      <article>
 
-		
-      <h4 class="section">Contents</h4>
-      <div>
-       <p> pass </p>
-      </div>
+        <h1 class="title" style="text-align: center">DS-TTS</h1>
+
+        <p class="authors"><strong>ZiYi Yang</strong></p>
+        <div class="abstract">
+          <p><strong>Abstract</strong><br>
+            pass
+          </p>
+        </div>
 
 
-      <p id="4.2"></p>
-      <h4 class="section"> Evaluation on Trained Speakers</h4>
-
-	<p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases.</em></p>
-
-<table>
-  <thead style="border-bottom: 1px solid #E1E1E1;">
-    <tr>
-      <th>Reference Audio</th>
-      <th>Model 1</th>
-      <th>Model 2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2" style="border-bottom: 1px solid #E1E1E1;"></td>
-      <td><b><p>GT</p></b></td>
-      <td><b><p>GT mel + MelGAN</p></b></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #E1E1E1;">
-      <td><audio controls="controls"><source src="audios/4.2/gt/1463_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls"><source src="audios/4.2/gt+mel/1463_gt+mel.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td><hr style="width:5%; border-top: 2.7px solid black;"></td>
-      <td><b><p>DeepVoice3</p></b></td>
-      <td><b><p>Another Model</p></b></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #E1E1E1;">
-      <td></td>
-      <td><audio controls="controls"><source src="audios/4.2/dv/1463_dv3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls"><source src="audios/4.2/another_model/1463_another_model.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-    </tr>
-  </tbody>
-</table>
+        <h2 class="section">Contents</h2>
+        <div>
+          <p> pass </p>
+        </div>
 
 
-      <p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Reference Audio</th>
-        <th>Model</th>
-        <th></th>
-        </tr></thead>
-        <tbody>
-        <tr>
-        <td rowspan="2" style="border-bottom: 1px solid #E1E1E1;"></td>
-        <td><b><p>GT</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt/1463_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr  style="border-bottom: 1px solid #E1E1E1;">
-        <td><b><p>GT mel + MelGAN</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt+mel/1463_gt+mel.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><hr style="width:5%; border-top: 2.7px solid black;"></td>
-          <td><b><p>DeepVoice3</p></b></td>
-          <td><audio controls="controls"><source src="audios/4.2/dv/1463_dv3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          </tr>
-        <tr>
-        <td rowspan="5"><audio controls="controls"><source src="audios/4.2/infer/1463_infer.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        <td><b><p>GMVAE</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gm/1463_gm.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2(<em>vanila</em>)</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/vanila/1463_vanila.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2+<em>d</em>-vector</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/d-vector/1463_d-vector.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ss/1463_ss.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Meta-StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ms/1463_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr></tbody>
-      </table>
+        <p id="4.2"></p>
+        <h2 class="section"> Evaluation on long sequence</h2>
 
-      <p class="transcript"><em>LibriTTS : the standard of measurement these days is the ability to serve.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Reference Audio</th>
-        <th>Model</th>
-        <th></th>
-        </tr></thead>
-        <tbody>
-        <tr>
-        <td rowspan="2" style="border-bottom: 1px solid #E1E1E1;"></td>
-        <td><b><p>GT</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt/6492_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr  style="border-bottom: 1px solid #E1E1E1;">
-        <td><b><p>GT mel + MelGAN</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt+mel/6492_gt+mel.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><hr style="width:5%; border-top: 2.7px solid black;"></td>
-          <td><b><p>DeepVoice3</p></b></td>
-          <td><audio controls="controls"><source src="audios/4.2/dv/6492_dv3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          </tr>
-        <tr>
-        <td rowspan="5"><audio controls="controls"><source src="audios/4.2/infer/6492_infer.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        <td><b><p>GMVAE</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gm/6492_gm.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2(<em>vanila</em>)</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/vanila/6492_vanila.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2+<em>d</em>-vector</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/d-vector/6492_d-vector.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ss/6492_ss.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Meta-StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ms/6492_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr></tbody>
-      </table>
+        <div>
+          <p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the
+              drops,
+              and the width of the colored band increases as the size of the drops increases.</em></p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00005.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00005.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00005.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00005.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00005.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00005.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00005.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00005.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the
+              drops, and the width of the colored band increase as the size of the drops increases.</em></p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00012.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00012.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00012.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00012.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00012.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00005.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00012.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00012.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the
+              drops, and the width of the colored band increases as the size of the drops increases.</em></p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00017.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00017.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00017.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00017.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00017.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00017.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00017.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00017.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : The difference in the rainbow depends considerably upon the size of the
+              drops, and the width of the colored band increases as the size of the drops increases.</em></p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00020.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00020.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00020.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00020.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00020.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00020.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00020.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00020.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : If the red of the second bow falls upon the green of the first, the result is
+              to give a bow with an abnormally wide yellow band, since red and green light when mixed form yellow.</em>
+          </p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00026.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00026.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00026.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00026.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00026.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00026.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00026.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00026.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text :The difference in the rainbow depends considerably upon the size of the drops,
+              and the width of the colored band increases as the size of the drops increases.</em>
+          </p>
+          <table class="center-table" class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00030.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table  class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00030.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00030.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00030.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00030.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00030.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00030.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00030.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text :The difference in the rainbow depends considerably upon the size of the drops,
+              and the width of the colored band increases as the size of the drops increases.</em>
+          </p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00032.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00032.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00032.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00032.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00032.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00032.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00032.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00032.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : If the red of the second bow falls upon the green of the first, the result is
+              to give a bow with an abnormally wide yellow band, since red and green light when mixed form yellow.</em>
+          </p>
+          <table class="center-table" class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00063.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00063.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00063.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00063.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00063.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00063.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00063.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00063.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text : If the red of the second bow falls upon the green of the first, the result is
+              to give a bow with an abnormally wide yellow band, since red and green light when mixed form yellow.</em>
+          </p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00067.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00067.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00067.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00067.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00067.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00067.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00067.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00067.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <p class="transcript"><em>Text :The difference in the rainbow depends considerably upon the size of the drops,
+              and the width of the colored band increases as the size of the drops increases.</em>
+          </p>
+          <table class="center-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <audio controls="controls">
+                    <source src="长文本的demo\0-refaudio\00069.wav" autoplay />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="center-table" style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 14%;"><b>
+                    <p>StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>retraining StyleSpeech</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>YOURTTS</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>VALLEX</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>styletts2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>XTTS v2</p>
+                  </b></td>
+                <td style="width: 14%;"><b>
+                    <p>DS-TTS</p>
+                  </b></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E1E1E1;">
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\6-stylespeech(sp)\00069.wav" autoplay />Your browser does not support the
+                    audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\5-0checkpoint\00069.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\2-YOURTTS\00069.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\4-VALLEX\00069.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\7-styletts2\00069.wav" autoplay />Your browser does not support the audio
+                    element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\8-XTTV2\00069.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+                <td><audio controls="controls" style="width: 100%;">
+                    <source src="长文本的demo\3-DSTTS\00069.wav" autoplay />Your browser does not support the audio element.
+                  </audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
 
-      <p class="transcript"><em>LibriTTS : after years of watching the processes of nature, he says, i can no more doubt the existence of an intelligence that is running things than i do of the existence of myself.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Reference Audio</th>
-        <th>Model</th>
-        <th></th>
-        </tr></thead>
-        <tbody>
-        <tr>
-        <td rowspan="2" style="border-bottom: 1px solid #E1E1E1;"></td>
-        <td><b><p>GT</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt/2204_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr  style="border-bottom: 1px solid #E1E1E1;">
-        <td><b><p>GT mel + MelGAN</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt+mel/2204_gt+mel.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><hr style="width:5%; border-top: 2.7px solid black;"></td>
-          <td><b><p>DeepVoice3</p></b></td>
-          <td><audio controls="controls"><source src="audios/4.2/dv/2204_dv3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          </tr>
-        <tr>
-        <td rowspan="5"><audio controls="controls"><source src="audios/4.2/infer/2204_infer.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        <td><b><p>GMVAE</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gm/2204_gm.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2(<em>vanila</em>)</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/vanila/2204_vanila.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2+<em>d</em>-vector</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/d-vector/2204_d-vector.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ss/2204_ss.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Meta-StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ms/2204_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr></tbody>
-      </table>
-
-      <p class="transcript"><em>LibriTTS : now this child was too old to be nursed, as everybody told her; for he could run, say two yards alone, and perhaps four or five, by holding to handles.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Reference Audio</th>
-        <th>Model</th>
-        <th></th>
-        </tr></thead>
-        <tbody>
-        <tr>
-        <td rowspan="2" style="border-bottom: 1px solid #E1E1E1;"></td>
-        <td><b><p>GT</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt/3105_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr  style="border-bottom: 1px solid #E1E1E1;">
-        <td><b><p>GT mel + MelGAN</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gt+mel/3105_gt+mel.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><hr style="width:5%; border-top: 2.7px solid black;"></td>
-          <td><b><p>DeepVoice3</p></b></td>
-          <td><audio controls="controls"><source src="audios/4.2/dv/3105_dv3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          </tr>
-        <tr>
-        <td rowspan="5"><audio controls="controls"><source src="audios/4.2/infer/3105_infer.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        <td><b><p>GMVAE</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/gm/3105_gm.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2(<em>vanila</em>)</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/vanila/3105_vanila.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Multi-speaker FS2+<em>d</em>-vector</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/d-vector/3105_d-vector.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ss/3105_ss.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-        <td><b><p>Meta-StyleSpeech</p></b></td>
-        <td><audio controls="controls"><source src="audios/4.2/ms/3105_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr></tbody>
-      </table>
-
-
-      
-
-      <!-- 4.3 -->
-
-      <p id="4.3"></p>
-      <h4 class="section">(Section 4.3) Unseen Speakers Adaptation</h4>
-      <h5 id="4.3.1">1. Varying Lengths of Reference Audios</h5>
-      <p class="transcript"><em>VCTK : i have the first six months of next season to prove myself.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Length of reference audio</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        <th>StyleSpeech</th>
-        <th>Multi-speaker<br>FS2+<em>d</em>-vector</th>
-        <th>Multi-speaker<br>FS2(<em>vanila</em>)</th>
-        <th>GMVAE</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><p> &lt;1sec </p></td>
-          <td rowspan="4"><audio controls="controls"><source src="audios/4.3/varying/p237_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p237_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p237_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p237_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p237_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p237_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1~3sec </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 2 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p237_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p237_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p237_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p237_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p237_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="transcript"><em>VCTK : he's an excellent defender, strong and quick.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Length of reference audio</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        <th>StyleSpeech</th>
-        <th>Multi-speaker<br>FS2+<em>d</em>-vector</th>
-        <th>Multi-speaker<br>FS2(<em>vanila</em>)</th>
-        <th>GMVAE</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><p> &lt;1sec </p></td>
-          <td rowspan="4"><audio controls="controls"><source src="audios/4.3/varying/p297_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p297_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p297_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p297_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p297_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p297_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1~3sec </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p297_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p297_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p297_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p297_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p297_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p297_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p297_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p297_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p297_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p297_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 2 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p297_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p297_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p297_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p297_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p297_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="transcript"><em>VCTK : he was a crazy man.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Length of reference audio</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        <th>StyleSpeech</th>
-        <th>Multi-speaker<br>FS2+<em>d</em>-vector</th>
-        <th>Multi-speaker<br>FS2(<em>vanila</em>)</th>
-        <th>GMVAE</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><p> &lt;1sec </p></td>
-          <td rowspan="4"><audio controls="controls"><source src="audios/4.3/varying/p241_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p241_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p241_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p241_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p241_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p241_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1~3sec </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p241_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p241_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p241_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p241_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p241_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p241_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p241_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p241_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p241_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p241_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 2 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p241_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p241_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p241_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p241_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p241_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="transcript"><em>VCTK : i could live without the attention, he admitted.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Length of reference audio</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        <th>StyleSpeech</th>
-        <th>Multi-speaker<br>FS2+<em>d</em>-vector</th>
-        <th>Multi-speaker<br>FS2(<em>vanila</em>)</th>
-        <th>GMVAE</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><p> &lt;1sec </p></td>
-          <td rowspan="4"><audio controls="controls"><source src="audios/4.3/varying/p280_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p280_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p280_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p280_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p280_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p280_0.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1~3sec </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p280_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p280_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p280_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p280_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p280_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 1 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p280_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p280_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p280_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p280_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p280_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> 2 sentence </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ms/p280_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/ss/p280_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/d-vector/p280_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/vanila/p280_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/varying/gm/p280_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-
-      <h5 id="4.3.2">2. Gender and Accent</h5>
-      <p class="transcript"><em>VCTK</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Gender</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td rowspan="2"><p> Male </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/male_gt_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/male_ms_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><audio controls="controls"><source src="audios/4.3/gender/male_gt_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/male_ms_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td rowspan="2"><p> Female </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/female_gt_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/female_ms_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><audio controls="controls"><source src="audios/4.3/gender/female_gt_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/gender/female_ms_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="transcript"><em>VCTK</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Accent</th>
-        <th>GT</th>
-        <th>Meta-StyleSpeech</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><p> American </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/american_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/american_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> Britsh </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/british_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/british_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> Indian </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/indian_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/indian_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> African </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/african_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/african_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        <tr>
-          <td><p> Australian </p></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/australian_gt.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.3/accent/australian_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-      
-        </tbody>
-      </table>
-
-      <!-- 4.4 -->
-      <p id="4.4"></p>
-      <h4 class="section">(Section 4.4) Ablation Studies</h4>
-      <p class="transcript"><em>LibriTTS(seen) : after years of watching the processes of nature, he says, i can no more doubt the existence of an intelligence that is running things than i do of the existence of myself.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Meta-StyleSpeech</th>
-        <th>w/o $D_t$</th>
-        <th>w/o $D_s$</th>
-        <th>w/o $L_{cls}$</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><audio controls="controls"><source src="audios/4.4/libri/libri_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/libri/libri_noTD.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/libri/libri_noSD.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/libri/libri_noCE.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p class="transcript"><em>VCTK(unseen) : however, they continued in their pursuit of victory.</em></p>
-      <table>
-        <thead style="border-bottom: 1px solid #E1E1E1;"><tr>
-        <th>Meta-StyleSpeech</th>
-        <th>w/o $D_t$</th>
-        <th>w/o $D_s$</th>
-        <th>w/o $L_{cls}$</th>
-        </tr></thead>
-        <tbody>
-        <tr>
-          <td><audio controls="controls"><source src="audios/4.4/vctk/vctk_ms.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/vctk/vctk_noTD.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/vctk/vctk_noSD.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-          <td><audio controls="controls"><source src="audios/4.4/vctk/vctk_noPro.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-        </tr>
-        </tbody>
-      </table>
-
-		</article>
-	</main>
-
-
-</div>
-
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-139981676-1', 'auto');
-	ga('send', 'pageview');
-</script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 
-<script type="text/x-mathjax-config">
+
+
+      </article>
+    </main>
+
+
+  </div>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-139981676-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+  <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
          HTML: ["input/TeX","output/HTML-CSS"],
          TeX: {
@@ -600,7 +882,7 @@
      });
  </script>
 
- <script type="text/x-mathjax-config">
+  <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
        tex2jax: {
          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
@@ -608,9 +890,30 @@
      });
  </script>
 
- <script type="text/javascript" async
-   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
- </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 
 </body>
+
 </html>
+
+<style>
+  .center-table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center-table thead {
+    border-bottom: 100px solid #E1E1E1;
+  }
+
+  .center-table tr {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .center-table td {
+    border-bottom: 1px solid #E1E1E1;
+  }
+</style>
